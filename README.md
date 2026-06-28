@@ -6,19 +6,23 @@ A decentralized live poll dApp built on Stellar's Soroban smart contract platfor
 
 ## 🚀 Live Demo
 
-[Deploy link here — add after Vercel deploy]
+[https://live-poll-rose.vercel.app/](https://live-poll-rose.vercel.app/)
 
 ---
 
 ## 📸 Screenshots
 
-### Wallet Connect Modal
+### 🏠 Home Screen
 
-[Add screenshot of wallet options modal here]
+![Home Screen](./screenshots/home.jpg)
 
-### Poll UI
+### 🔗 Wallet Connect Modal
 
-[Add screenshot of voting screen here]
+![Wallet Connect Modal](./screenshots/wallet-modal.jpg)
+
+### 🗳️ Poll UI
+
+![Poll UI](./screenshots/poll.jpg)
 
 ---
 
@@ -94,23 +98,26 @@ cargo build --target wasm32v1-none --release
 
 ## 📁 Project Structure
 
+```
 live-poll/
+├── contract/
+│   ├── contracts/
+│   │   └── live-poll/
+│   │       └── src/
+│   │           └── lib.rs
+│   ├── Cargo.toml
+│   └── Cargo.lock
+└── frontend/
+    └── src/
+        ├── components/
+        │   ├── DonutChart.jsx
+        │   ├── Toast.jsx
+        │   └── TransactionSteps.jsx
+        ├── lib/
+        │   └── contract.js
+        └── App.jsx
 
-├── contract/ # Soroban smart contract (Rust)
-
-│ └── contracts/live-poll/
-
-│ └── src/lib.rs # Contract logic
-
-└── frontend/ # React + Vite frontend
-
-└── src/
-
-├── lib/contract.js # Contract interaction logic
-
-├── components/ # Toast, DonutChart, TransactionSteps
-
-## └── App.jsx # Main app
+```
 
 ## 🔐 How It Works
 
